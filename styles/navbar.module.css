@@ -1,0 +1,66 @@
+.navbar{
+
+}
+.deskMenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6vh;
+    background: linear-gradient(90deg, #05445E,#05445E);
+    color: white;
+}
+.rightSide{
+    display: flex;
+    gap: 20px;
+}
+.mobileMenu{
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .deskMenu{
+        display: none;
+    }
+    .mobileMenu{
+        display: block;
+        background: linear-gradient(90deg, rgba(224,240,215,1) 25%, rgba(255,255,255,1) 50%, rgba(224,240,215,1) 75%);
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+    .menuIcon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-50%, 10%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    .active{
+        background: linear-gradient(90deg, rgba(255,255,255,0.9528186274509804) 3%, rgba(224,240,215,1) 25%);
+        backdrop-filter: blur(3px); 
+        text-align: left;
+        list-style-position: inside;
+        left: 0;
+        padding-top: 10px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 9999;
+    }
+    .normal{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 20px;
+        left: -100%;
+        backdrop-filter: blur(25px);
+        z-index: 9999;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+}
