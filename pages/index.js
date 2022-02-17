@@ -2,10 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import CategoryCard from '../components/categoryCard'
 import styles from '../styles/Home.module.css'
-import hero from "../public/hero.png"
 import { Box, Container, Grid, Typography } from '@mui/material'
 import { categories } from '../menuItems/categories'
-
+import { motion } from "framer-motion"
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -28,18 +27,28 @@ export default function Home() {
 
       >
 
-        <div className={styles.heroSection}>
-          <div className={styles.heroText}>
+        <div
+          className={styles.heroSection}>
+          <div
+            className={styles.heroText}>
             <Typography variant="h1">
               Your Construction Needs
             </Typography>
-            <Typography variant="h1">
-              Our Priority
-            </Typography>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 3 }}
+            >
+              <Typography variant="h1">
+                Our Priority
+              </Typography>
+
+            </motion.div>
+
 
           </div>
         </div>
-        <Typography variant="h3"  className={styles.categoryHeading}>Browse by Category</Typography>
+        <Typography variant="h3" className={styles.categoryHeading}>Browse by Category</Typography>
         <Container maxWidth={false} className={styles.mainBox}>
           <Grid
             container

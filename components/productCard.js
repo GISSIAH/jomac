@@ -1,13 +1,15 @@
 import { Card, CardMedia, CardContent, Typography, Chip, Button } from "@mui/material"
-
 import styles from '../styles/card.module.css'
-
-
+import { motion } from "framer-motion"
 export default function ProductCard(props) {
     const { title, price, image } = props.product
 
     return (
-        <div>
+        <motion.div
+            whileHover={{
+                scale: 1.05,
+            }}
+        >
             <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 {...props}
@@ -15,7 +17,7 @@ export default function ProductCard(props) {
                 <CardMedia
                     image={image}
                     alt={title}
-                    sx={{width:'100%',height:'15vh'}}
+                    sx={{ width: '100%', height: '15vh' }}
                 />
                 <CardContent>
                     <Typography variant="h4" className={styles.propertyTitle}>{title}</Typography>
@@ -23,6 +25,6 @@ export default function ProductCard(props) {
                     <Chip label="In Stock" variant="outlined" />
                 </CardContent>
             </Card>
-        </div>
+        </motion.div>
     )
 }

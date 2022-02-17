@@ -18,7 +18,14 @@
   }
 .mainBox{
   display: flex;
-  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5vh;
+}
+.map{
+  margin-top: 2vh;
+  width: 50vw;
+  height: 45vh;
 }
 
 
