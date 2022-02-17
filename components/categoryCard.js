@@ -5,11 +5,14 @@ export default function CategoryCard(props) {
     return (
         <Link href={props.url}>
             <a>
-                <Card className={styles.card}>
+                <Card
+                    sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+                    {...props}
+                >
                     <CardMedia
                         image={props.image}
                         alt={props.title}
-                        className={styles.image}
+                        sx={{width:'100%',height:'15vh'}}
                     />
                     <CardContent>
                         <Typography variant="h4" color="secondary" className={styles.categoryTitle}>{props.title}</Typography>

@@ -1,0 +1,18 @@
+.foot {
+    margin-top: 5vh;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: #c4dce6;
+  }
+  
+  .footerGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  

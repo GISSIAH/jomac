@@ -1,12 +1,12 @@
 import React from 'react'
 import { useRouter } from "next/router";
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { Container, Grid } from '@mui/material'
 import styles from "../../styles/category.module.css"
 import Head from 'next/head';
 import ProductCard from '../../components/productCard';
 import { data } from '../../data/sample';
 
-  
 
 export default function Category() {
 
@@ -22,22 +22,47 @@ export default function Category() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
+
+            <Box component="main"
+                sx={{
+                    flexGrow: 1,
+                    py: 8,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}
+
+            >
                 <div className={styles.heading}>
                     <Typography variant="h3" color="primary">{title}</Typography>
                 </div>
-                <div className={styles.productGrid}>
-                {data.map((product)=>{
-                    return(
-                        <ProductCard 
-                        product={product}
-                       />
-                    )
-                })}
-                    
-                 </div>
+                <Container maxWidth={false} className={styles.mainBox}>
+                    <Grid
+                        container
+                        spacing={4}
+                    >
+                        {data.map((product) => {
+                            return (
+                                <Grid
+                                    item
+                                    lg={3}
+                                    sm={4}
+                                    xl={3}
+                                    xs={6}
+                                >
+                                    <ProductCard
+                                        product={product}
+                                    />
 
-            </main>
+                                </Grid>
+
+                            )
+                        })}
+                    </Grid>
+                </Container>
+
+            </Box>
         </div>
     )
 }

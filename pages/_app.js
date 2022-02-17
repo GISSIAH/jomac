@@ -16,7 +16,6 @@ export default function MyApp({ Component, pageProps }) {
     palette:{
       primary:{
         main:"#05445E",
-        light:"#189AB4",
       },
       secondary:{
         main:"#116466"
@@ -36,7 +35,7 @@ export default function MyApp({ Component, pageProps }) {
       },
       h3:{
         fontFamily:"Open Sans",
-        fontWeight:500
+        fontWeight:400
       },
       h4:{
         fontFamily:"Open Sans",

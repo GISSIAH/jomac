@@ -9,19 +9,19 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
                 <div className={styles.leftSide} >
-                    <Typography variant='h4' style={{ fontWeight: '500',color:'white' }}>
+                    <Typography variant='h4' color="secondary" style={{ fontWeight: '600'}}>
                         JOMAC
                     </Typography>
                 </div>
                 <div className={styles.rightSide}>
                     <Link href="/">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500' }}> Home</Typography></a>
+                        <a><Typography varint="overline" style={{ fontStyle: 'bold', fontWeight: '600' }}> Home</Typography></a>
                     </Link>
                     <Link href="/products">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500' }}>Products</Typography></a>
+                        <a><Typography varint="overline" style={{ fontStyle: 'bold', fontWeight: '600' }}>Products</Typography></a>
                     </Link>
                     <Link href="/contact">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500' }}> Contacts</Typography></a>
+                        <a><Typography varint="overline" style={{ fontStyle: 'bold', fontWeight: '600' }}> Contacts</Typography></a>
                     </Link>
                 </div>
             </div>

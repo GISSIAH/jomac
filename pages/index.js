@@ -3,9 +3,9 @@ import Image from 'next/image'
 import CategoryCard from '../components/categoryCard'
 import styles from '../styles/Home.module.css'
 import hero from "../public/hero.png"
-import { Typography } from '@mui/material'
-import { Text } from '@nextui-org/react';
+import { Box, Container, Grid, Typography } from '@mui/material'
 import { categories } from '../menuItems/categories'
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,31 +15,53 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+
+      <Box component="main"
+        sx={{
+          flexGrow: 1,
+          py: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}
+
+      >
+
         <div className={styles.heroSection}>
           <div className={styles.heroText}>
-            <Typography variant="h3">
+            <Typography variant="h1">
               Your Construction Needs
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h1">
               Our Priority
             </Typography>
-            <Typography variant="subtitle1">
-              Shop kitchen sinks, pipes, electrical wires and many more to finish your house.
-            </Typography>
+
           </div>
         </div>
-
-        <Typography variant="h3" color="primary" className={styles.categoryHeading}>Browse by Category</Typography>
-        <div className={styles.homeGrid}>
-
-          {
-            categories.map((cat, index) => (
-              <CategoryCard image={cat.image} title={cat.title} url={cat.url} key={index} />
-            ))
-          }
-        </div>
-      </main>
+        <Typography variant="h3"  className={styles.categoryHeading}>Browse by Category</Typography>
+        <Container maxWidth={false} className={styles.mainBox}>
+          <Grid
+            container
+            spacing={4}
+          >
+            {
+              categories.map((cat, index) => (
+                <Grid
+                  item
+                  lg={3}
+                  sm={6}
+                  xl={3}
+                  xs={6}
+                  key={index}
+                >
+                  <CategoryCard image={cat.image} title={cat.title} url={cat.url} key={index} />
+                </Grid>
+              ))
+            }
+          </Grid>
+        </Container>
+      </Box>
     </div>
   )
 }
