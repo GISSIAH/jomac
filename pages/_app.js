@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps }) {
       },
       h3:{
         fontFamily:"Open Sans",
-        fontWeight:400
+        fontWeight:500
       },
       h4:{
         fontFamily:"Open Sans",

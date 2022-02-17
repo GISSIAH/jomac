@@ -9,7 +9,7 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
                 <div className={styles.leftSide} >
-                    <Typography variant='h4' color="secondary" style={{ fontWeight: '600'}}>
+                    <Typography variant='h4'  style={{ fontWeight: '700'}}>
                         JOMAC
                     </Typography>
                 </div>

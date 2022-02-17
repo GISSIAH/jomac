@@ -16,21 +16,25 @@
   justify-content: center;
   align-items: center;
   gap:5vw;
-  margin-bottom: 10vh;
-  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-top: 0vh;
+  height: 45vh;
+  width: 100%;
+  background: url("https://res.cloudinary.com/attic-gis/image/upload/v1645124936/construction-pvc-pipes-composition_frmyqi.jpg");
 }
 .heroText{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #b0f0fd;
 }
 .hero{
   width: 80vw;
   height: 40vh;
 }
 .homeGrid{
-  margin-top: 5vh;
+  margin-top: 2vh;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 20px;
@@ -61,7 +65,7 @@
   font-weight: 600;
 }
 .categoryHeading{
-  margin-top: 2.5vh;
+  margin-top: 1vh;
   margin-bottom: 2.5vh;
 }
 

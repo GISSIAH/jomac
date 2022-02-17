@@ -52,10 +52,10 @@ export default function Footer() {
               xl={6}
             >
               <Typography variant="h4">Categories</Typography>
-              <Link href="/services"><Typography variant="body1">Plumbing</Typography></Link>
-              <Link   href="/services"><Typography variant="body1">Electrical</Typography></Link>
-              <Link  href="/services"><Typography variant="body1">Building</Typography></Link>
-              <Link href="/services"><Typography variant="body1">Wiring</Typography></Link>
+              <Link href="/categories/Plumbing"><a><Typography variant="body1">Plumbing</Typography></a></Link>
+              <Link   href="/categories/Electrical"><a><Typography variant="body1">Electrical</Typography></a></Link>
+              <Link  href="/categories/Building"><a><Typography variant="body1">Building</Typography></a></Link>
+              <Link href="/categories/Wiring"><a><Typography variant="body1">Wiring</Typography></a></Link>
             </Grid>
             <Grid item
               sx={{
