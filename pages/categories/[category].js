@@ -40,7 +40,7 @@ export default function Category() {
                 <Container maxWidth={false} className={styles.mainBox}>
                     <Grid
                         container
-                        spacing={4}
+                        spacing={6}
                     >
                         {data.map((product) => {
                             return (
