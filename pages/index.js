@@ -15,10 +15,9 @@ export default function Home() {
       </Head>
 
 
-      <Box component="main"
+      <Box 
         sx={{
           flexGrow: 1,
-          py: 8,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
