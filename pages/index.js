@@ -48,10 +48,10 @@ export default function Home() {
           </div>
         </div>
         <Typography variant="h2" className={styles.categoryHeading}>Browse by Category</Typography>
-        <Container maxWidth={false} className={styles.mainBox}>
+        <Box >
           <Grid
             container
-            spacing={4}
+            spacing={6}
           >
             {
               categories.map((cat, index) => (
@@ -68,7 +68,7 @@ export default function Home() {
               ))
             }
           </Grid>
-        </Container>
+        </Box>
       </Box>
     </div>
   )
