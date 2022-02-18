@@ -77,7 +77,7 @@ export default function MyApp({ Component, pageProps }) {
         },[`@media screen and (max-width: 992px)`]: {
           fontSize: "1.75rem"
         },[`@media screen and (max-width: 768px)`]: {
-          fontSize: "155rem"
+          fontSize: "1.55rem"
         },[`@media screen and (max-width: 600px)`]: {
           fontSize: "1.25rem"
         },[`@media screen and (max-width: 375px)`]: {

@@ -70,6 +70,10 @@
     font-size: 2rem;
     font-weight: 600;
   }
+  .categoryHeading{
+    font-size: 20pt;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 768px) {
   .grid {
@@ -78,6 +82,7 @@
   }
   .categoryHeading{
     font-size: 20pt;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 480px) {
@@ -95,6 +100,7 @@
   }
   .categoryHeading{
     font-size: 18pt;
+    margin-bottom: 20px;
   }
   .hero{
     width: 85vw;
@@ -117,6 +123,7 @@
 
   .categoryHeading{
     font-size: 14pt;
+    margin-bottom: 20px;
   }
   .heroText h1{
     font-size: 14pt;

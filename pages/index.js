@@ -47,7 +47,7 @@ export default function Home() {
 
           </div>
         </div>
-        <Typography variant="h3" className={styles.categoryHeading}>Browse by Category</Typography>
+        <Typography variant="h2" className={styles.categoryHeading}>Browse by Category</Typography>
         <Container maxWidth={false} className={styles.mainBox}>
           <Grid
             container
