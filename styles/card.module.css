@@ -2,17 +2,8 @@
     width: 15vw;
     height: 15vh;
 }
-.card{
-    width: 15vw;
-    height: 25vh;
-}
-.card:hover{
-    box-shadow: -1px 6px 19px 0px #116466;
-}
-.productCard{
-    width: 15vw;
-    height: 28vh; 
-}
+
+
 .productCard:hover{
     box-shadow: -1px 6px 19px 0px #116466
 }
@@ -23,20 +14,14 @@
     font-size: 14pt;
 }
 @media (max-width: 1024px) {
-    .productCard{
-        width: 18vw;
-        height: 30vh; 
-    }
+
     .propertyTitle{
         font-size: 12pt;
     }
     .propertyPrice{
         font-size: 12pt;
     }
-    .card{
-        width: 18vw;
-        height: 25vh;
-    }
+
     .image{
         width: 18vw;
         height: 15vh;
@@ -54,10 +39,7 @@
     .categoryTitle{
         font-size: 18pt;
     }
-    .productCard{
-        width: 20vw;
-        height: 30vh; 
-    }
+
 
   }
   @media (max-width: 480px) {
@@ -72,10 +54,7 @@
     .categoryTitle{
         font-size: 18pt;
     }
-    .productCard{
-        width: 35vw;
-        height: 28vh; 
-    }
+
     .propertyTitle{
         font-size: 9.5pt;
     }
@@ -95,10 +74,7 @@
         width: 32vw;
         height: 22vh;
     }
-    .productCard{
-        width: 40vw;
-        height: 32vh; 
-    }
+
     .propertyTitle{
         font-size: 10pt;
     }

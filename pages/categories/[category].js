@@ -5,14 +5,23 @@ import { Container, Grid } from '@mui/material'
 import styles from "../../styles/category.module.css"
 import Head from 'next/head';
 import ProductCard from '../../components/productCard';
-import { data } from '../../data/sample';
-
+import { useState,useEffect } from 'react';
+import axios from 'axios';
 
 export default function Category() {
+    const [products,setProducts] = useState([])
 
-
+    
     const router = useRouter()
     const title = router.query.category
+    useEffect(()=>{
+        axios.get(`https://alpha-jomac.herokuapp.com/product/category/${title}`).then((res)=>{
+            console.log(res.data);
+            setProducts(res.data)
+        }).catch((err)=>{
+            alert("an error occured on our end")
+        })
+    },[title])
 
     return (
         <div className={styles.container}>
@@ -23,7 +32,7 @@ export default function Category() {
             </Head>
 
 
-            <Box component="main"
+            <Box
                 sx={{
                     flexGrow: 1,
                     py: 8,
@@ -42,14 +51,15 @@ export default function Category() {
                         container
                         spacing={6}
                     >
-                        {data.map((product) => {
+                        {products.map((product) => {
                             return (
                                 <Grid
                                     item
                                     lg={3}
-                                    sm={4}
+                                    md={4}
+                                    sm={6}
                                     xl={3}
-                                    xs={6}
+                                    xs={12}
                                 >
                                     <ProductCard
                                         product={product}

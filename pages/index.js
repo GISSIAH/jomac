@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
 
-      <Box 
+      <Box
         sx={{
           flexGrow: 1,
           display: 'flex',
@@ -48,28 +48,28 @@ export default function Home() {
           </div>
         </div>
         <Typography variant="h2" className={styles.categoryHeading}>Browse by Category</Typography>
-        <Box >
           <Grid
             container
             spacing={6}
+            sx={{justifyContent:'center'}}
           >
-            {
-              categories.map((cat, index) => (
-                <Grid
-                  item
-                  lg={3}
-                  sm={6}
-                  xl={3}
-                  xs={6}
-                  key={index}
-                >
-                  <CategoryCard image={cat.image} title={cat.title} url={cat.url} key={index} />
-                </Grid>
-              ))
-            }
-          </Grid>
+          {
+            categories.map((cat, index) => (
+              <Grid
+                item
+                lg={3}
+                sm={6}
+                xl={3}
+                xs={6}
+                key={index}
+              >
+                <CategoryCard image={cat.image} title={cat.title} url={cat.url} key={index} />
+              </Grid>
+            ))
+          }
+
+            </Grid>
         </Box>
-      </Box>
     </div>
   )
 }

@@ -15,13 +15,13 @@ export default function Navbar() {
                 </div>
                 <div className={styles.rightSide}>
                     <Link href="/">
-                        <a><Typography varint="overline" style={{ fontStyle: 'bold', fontWeight: '600' }}> Home</Typography></a>
+                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}> Home</Typography></a>
                     </Link>
                     <Link href="/products">
-                        <a><Typography varint="overline" style={{ fontStyle: 'bold', fontWeight: '600' }}>Products</Typography></a>
+                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}>Products</Typography></a>
                     </Link>
                     <Link href="/contact">
-                        <a><Typography varint="overline" style={{ fontStyle: 'bold', fontWeight: '600' }}> Contacts</Typography></a>
+                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}> Contact</Typography></a>
                     </Link>
                 </div>
             </div>
