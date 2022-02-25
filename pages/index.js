@@ -43,7 +43,7 @@ export default function Home() {
               </Typography>
 
             </motion.div>
-            <Typography variant="body1" sx={{marginTop:5}}>
+            <Typography variant="body1" sx={{marginTop:5,textAlign:'center'}}>
               Shop essentials for your construction project
             </Typography>
 

@@ -40,14 +40,20 @@ export default function Navbar() {
                     </div>
                 </div>
                 <ul className={clicked ? styles.active : styles.normal}>
-                    <Link href="/">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}> Home</Typography></a>
+                    <Link href="/"  >
+                        <a  onClick={()=>{
+                            setClicked(false)
+                        }}><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}> Home</Typography></a>
                     </Link>
-                    <Link href="/products">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}>Products</Typography></a>
+                    <Link href="/products" >
+                        <a onClick={()=>{
+                            setClicked(false)
+                        }}><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}>Products</Typography></a>
                     </Link>
-                    <Link href="/contact">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}> Contacts</Typography></a>
+                    <Link href="/contact" >
+                        <a onClick={()=>{
+                            setClicked(false)
+                        }}><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}> Contacts</Typography></a>
                     </Link>
                 </ul>
 

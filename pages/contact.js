@@ -30,7 +30,7 @@ export default function Contact(props) {
 
                 <div className={styles.heroSection}>
                     <Typography variant='h1'>Get in touch</Typography>
-                    <Typography variant="body1" sx={{marginTop:2}}>Contact us for a quote and more information</Typography>
+                    <Typography variant="body1" sx={{marginTop:2, textAlign:'center'}}>Contact us for a quote and more information</Typography>
 
                 </div>
 
