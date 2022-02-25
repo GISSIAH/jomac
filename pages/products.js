@@ -2,8 +2,7 @@ import { Typography } from '@mui/material';
 import Head from 'next/head';
 import React from 'react';
 import styles from "../styles/products.module.css"
-import ProductCard from '../components/productCard';
-import { data } from '../data/sample';
+
 export default function products() {
     return (
         <div className={styles.container}>
@@ -19,13 +18,7 @@ export default function products() {
                 </div>
 
                 <div className={styles.productGrid}>
-                    {data.map((product) => {
-                        return (
-                            <ProductCard
-                                product={product}
-                            />
-                        )
-                    })}
+                    
                 </div>
 
 
