@@ -10,7 +10,9 @@
   margin-top: 0vh;
   height: 45vh;
   width: 100%;
-  background: url("https://res.cloudinary.com/attic-gis/image/upload/v1645124936/construction-pvc-pipes-composition_frmyqi.jpg");
+  background: url("https://res.cloudinary.com/attic-gis/image/upload/v1645719204/resize-16457191211406566195constructionpvcpipescomposition_1_ob51qi.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .heroText{
   display: flex;

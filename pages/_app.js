@@ -1,8 +1,5 @@
 import Layout from '../components/layout'
 import '../styles/globals.css'
-import { createStore } from "redux"
-import { Provider } from "react-redux"
-import Reducer from '../components/reducer'
 import { createTheme, ThemeProvider } from '@mui/material'
 
 
@@ -24,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
 
     },
     typography: {
-      fontFamily: "Open Sans",
+      fontFamily: "Open Sans, sans serif",
       h1: {
         fontFamily: "Open Sans",
         fontSize: '3.5rem', [`@media screen and (max-width: 1200px)`]: {

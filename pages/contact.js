@@ -48,7 +48,7 @@ export default function Contact(props) {
                             xl={3}
                             xs={12}
                         >
-                            <ContactCard icon={<AiFillPhone size={40} />} title="+265884568525" />
+                            <ContactCard icon={<AiFillPhone size={40} />} title="+26599993522" />
                         </Grid>
                         <Grid
                             item
@@ -57,13 +57,13 @@ export default function Contact(props) {
                             xl={3}
                             xs={12}
                         >
-                            <ContactCard icon={<AiOutlineMail size={40} />} title="malunje69@gmail.com" />
+                            <ContactCard icon={<AiOutlineMail size={40} />} title="info@jomacmw.com" />
                         </Grid>
 
                     </Grid>
                 </Container>
                 <div className={styles.map}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d342.3498239260926!2d33.77151139483625!3d-13.884226978680104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d5151deb8191%3A0xda2c6ac1d844eb9d!2zMTPCsDUzJzAzLjMiUyAzM8KwNDYnMTcuMCJF!5e0!3m2!1sen!2smw!4v1645134640347!5m2!1sen!2smw" width="100%" height="100%"  allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d342.3498239260926!2d33.77151139483625!3d-13.884226978680104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d5151deb8191%3A0xda2c6ac1d844eb9d!2zMTPCsDUzJzAzLjMiUyAzM8KwNDYnMTcuMCJF!5e0!3m2!1sen!2smw!4v1645134640347!5m2!1sen!2smw" width="100%" height="100%"  loading="lazy"></iframe>
                 </div>
 
             </Box>
