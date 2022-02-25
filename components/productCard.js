@@ -23,7 +23,7 @@ export default function ProductCard(props) {
                     sx={{ width: '100%', height: '15vh' }}
                 />
                 <CardContent>
-                    <Typography variant="h4" className={styles.propertyTitle}>{name}</Typography>
+                    <Typography variant="h5" >{name}</Typography>
                     <Grid container spacing={6} >
                         <Grid item
                             lg={6}
@@ -31,19 +31,12 @@ export default function ProductCard(props) {
                             sm={6}
                             xl={6}
                             xs={6}>
-                            <Typography variant="h4" className={styles.propertyPrice}>{formatter.format(price)}</Typography>
+                            <Typography variant="h5" >{formatter.format(price)}</Typography>
                         </Grid>
-                        <Grid item
-                            lg={4}
-                            md={4}
-                            sm={4}
-                            xl={4}
-                            xs={4}>
-                            <Chip label="In Stock" variant="outlined" />
-                        </Grid>
-
+                        
+                       
                     </Grid>
-
+                    <Chip label="In Stock" variant="outlined" />
 
                 </CardContent>
             </Card>

@@ -84,6 +84,17 @@ export default function MyApp({ Component, pageProps }) {
       },
       h5: {
         fontFamily: "Open Sans",
+        fontSize:'1.5rem',[`@media screen and (max-width: 1200px)`]: {
+          fontSize: "1.35rem"
+        },[`@media screen and (max-width: 992px)`]: {
+          fontSize: "1.3rem"
+        },[`@media screen and (max-width: 768px)`]: {
+          fontSize: "1.25rem"
+        },[`@media screen and (max-width: 600px)`]: {
+          fontSize: "1.25rem"
+        },[`@media screen and (max-width: 375px)`]: {
+          fontSize: "1.15rem"
+        },
         fontWeight: 400
       },
       h6: {
