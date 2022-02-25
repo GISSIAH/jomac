@@ -5,8 +5,8 @@
   justify-content: space-around;
   align-items: center;
   height: 6vh;
-  background: linear-gradient(90deg, #ffffff, #ffffff);
-  color: black;
+  color: white;
+  background: #c73e3e;
 }
 .rightSide {
   display: flex;
@@ -24,13 +24,14 @@
     display: block;
     position: sticky; 
     top: 0;
-    background: linear-gradient(90deg, #ffffff, #ffffff);
-    color: black;
+    background: #c73e3e;
+    color: white;
     height: 5vh;
   }
   .logo {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .menuIcon {
     display: block;
@@ -42,7 +43,7 @@
     cursor: pointer;
   }
   .active {
-    background: rgb(101, 161, 211);
+    background:#c73e3e;
     backdrop-filter: blur(3px);
     text-align: left;
     list-style-position: inside;

@@ -1,21 +1,15 @@
-.main {
-    min-height: 100vh;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
+
   .heroSection{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    width: 100%;
+    height: 30vh;
+    background: #c73e3e;
+    color:white
   }
-  .heroSection p{
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
+
 .mainBox{
   display: flex;
   justify-content: center;
@@ -35,6 +29,10 @@
     font-size: 2rem;
     font-weight: 400;
   }
+  .map{
+    width: 65vw;
+    height: 50vh;
+  }
 }
 
 @media (max-width: 768px) {
@@ -46,6 +44,10 @@
     font-size: 1rem;
     font-weight: 400;
   }
+  .map{
+    width: 80vw;
+    height: 50vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -56,6 +58,10 @@
   .heroSection p{
     font-size: 1rem;
     font-weight: 400;
+  }
+  .map{
+    width: 80vw;
+    height: 50vh;
   }
 
 }

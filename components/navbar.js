@@ -27,7 +27,7 @@ export default function Navbar() {
             </div>
             <div className={styles.mobileMenu}>
                 <div className={styles.logo}>
-                    <Typography variant='h4' color="primary" style={{ fontWeight: '700' }}>
+                    <Typography variant='h2'  style={{ fontWeight: '700' }}>
                         JOMAC
                     </Typography>
                     <div
@@ -36,7 +36,7 @@ export default function Navbar() {
                             setClicked(!clicked);
                         }}
                     >
-                        {clicked ? <FaTimes size={20}/> : <FaBars size={25} color="#343434" />}
+                        {clicked ? <FaTimes size={20}/> : <FaBars size={25} color="white" />}
                     </div>
                 </div>
                 <ul className={clicked ? styles.active : styles.normal}>

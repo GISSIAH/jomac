@@ -35,7 +35,6 @@ export default function Category() {
             <Box
                 sx={{
                     flexGrow: 1,
-                    py: 8,
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
@@ -44,7 +43,7 @@ export default function Category() {
 
             >
                 <div className={styles.heading}>
-                    <Typography variant="h3" color="primary">{title}</Typography>
+                    <Typography variant="h3" color="white">{title}</Typography>
                 </div>
                 <Container maxWidth={false} className={styles.mainBox}>
                     <Grid

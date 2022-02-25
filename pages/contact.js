@@ -19,19 +19,18 @@ export default function Contact(props) {
             <Box component="main"
                 sx={{
                     flexGrow: 1,
-                    py: 8,
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    
+
                 }}
 
             >
 
                 <div className={styles.heroSection}>
                     <Typography variant='h1'>Get in touch</Typography>
-                    <Typography variant="body1">Contact us for a quote and more information</Typography>
+                    <Typography variant="body1" sx={{marginTop:2}}>Contact us for a quote and more information</Typography>
 
                 </div>
 
@@ -61,9 +60,11 @@ export default function Contact(props) {
                         </Grid>
 
                     </Grid>
+
                 </Container>
+                <Typography variant="h2" sx={{marginTop:5,marginBottom:1}}>Visit our shop</Typography>
                 <div className={styles.map}>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d342.3498239260926!2d33.77151139483625!3d-13.884226978680104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d5151deb8191%3A0xda2c6ac1d844eb9d!2zMTPCsDUzJzAzLjMiUyAzM8KwNDYnMTcuMCJF!5e0!3m2!1sen!2smw!4v1645134640347!5m2!1sen!2smw" width="100%" height="100%"  loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d342.3498239260926!2d33.77151139483625!3d-13.884226978680104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921d5151deb8191%3A0xda2c6ac1d844eb9d!2zMTPCsDUzJzAzLjMiUyAzM8KwNDYnMTcuMCJF!5e0!3m2!1sen!2smw!4v1645134640347!5m2!1sen!2smw" width="100%" height="100%" loading="lazy"></iframe>
                 </div>
 
             </Box>

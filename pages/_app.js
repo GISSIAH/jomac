@@ -50,7 +50,7 @@ export default function MyApp({ Component, pageProps }) {
         },[`@media screen and (max-width: 375px)`]: {
           fontSize: "1.25rem"
         },
-        fontWeight: 600
+        fontWeight: 500
       },
       h3: {
         fontFamily: "Open Sans",

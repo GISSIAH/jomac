@@ -43,11 +43,14 @@ export default function Home() {
               </Typography>
 
             </motion.div>
+            <Typography variant="body1" sx={{marginTop:5}}>
+              Shop essentials for your construction project
+            </Typography>
 
 
           </div>
         </div>
-        <Typography variant="h2" className={styles.categoryHeading}>Browse by Category</Typography>
+        <Typography variant="h2"  className={styles.categoryHeading}>Browse by category</Typography>
           <Grid
             container
             spacing={6}
