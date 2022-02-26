@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
     },
     palette: {
       primary: {
-        main: "#05445E",
+        main: "#c73e3e",
       },
       secondary: {
         main: "#116466"

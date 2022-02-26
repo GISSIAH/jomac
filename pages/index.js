@@ -36,26 +36,26 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 3 }}
+              transition={{ duration: 2 }}
             >
               <Typography variant="h1">
                 Our Priority
               </Typography>
 
             </motion.div>
-            <Typography variant="body1" sx={{marginTop:5,textAlign:'center'}}>
+            <Typography variant="body1" sx={{ marginTop: 5, textAlign: 'center' }}>
               Shop essentials for your construction project
             </Typography>
 
 
           </div>
         </div>
-        <Typography variant="h2"  className={styles.categoryHeading}>Browse by category</Typography>
-          <Grid
-            container
-            spacing={6}
-            sx={{justifyContent:'center'}}
-          >
+        <Typography variant="h2" className={styles.categoryHeading}>Browse by category</Typography>
+        <Grid
+          container
+          spacing={6}
+          sx={{ px: 1 }}
+        >
           {
             categories.map((cat, index) => (
               <Grid
@@ -71,8 +71,8 @@ export default function Home() {
             ))
           }
 
-            </Grid>
-        </Box>
+        </Grid>
+      </Box>
     </div>
   )
 }

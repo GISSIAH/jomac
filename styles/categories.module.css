@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:ital,wght@0,700;1,100&display=swap');
+
+
+.heroSection{
+  display: flex;
+  justify-content: center;
+
+  gap:5vw;
+  margin-bottom: 2vh;
+  margin-top: 0vh;
+  height: 20vh;
+  width: 100%;
+  background: #c73e3e;
+}
+.heroText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+}
+.hero{
+  width: 80vw;
+  height: 40vh;
+}
+.homeGrid{
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  color: white;
+  background: #042e41;
+
+}
+.footerBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.footerLinks{
+  color:#b0f0fd;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  
+}
+@media (max-width: 768px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+}
+@media (max-width: 480px) {
+  .heroWord{
+    font-size: 52pt;
+  }
+  .homeGrid{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  }
+  
+  .hero{
+    width: 85vw;
+    height: 30vh;
+  }
+  
+  
+}
+@media (max-width: 320px) {
+
+}

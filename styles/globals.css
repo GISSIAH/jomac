@@ -14,7 +14,8 @@ a {
   text-decoration: none;
 }
 a:hover{
-  color: #29626d
+  background: #3685a7;
+  border-radius: 5px;
 }
 
 * {

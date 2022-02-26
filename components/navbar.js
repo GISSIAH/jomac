@@ -17,8 +17,8 @@ export default function Navbar() {
                     <Link href="/">
                         <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}> Home</Typography></a>
                     </Link>
-                    <Link href="/products">
-                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}>Products</Typography></a>
+                    <Link href="/category">
+                        <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}>Categories</Typography></a>
                     </Link>
                     <Link href="/contact">
                         <a><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '700' }}> Contact</Typography></a>
@@ -45,10 +45,10 @@ export default function Navbar() {
                             setClicked(false)
                         }}><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}> Home</Typography></a>
                     </Link>
-                    <Link href="/products" >
+                    <Link href="/category" >
                         <a onClick={()=>{
                             setClicked(false)
-                        }}><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}>Products</Typography></a>
+                        }}><Typography varint="body1" style={{ fontStyle: 'bold', fontWeight: '500',marginTop:'5px' }}>Categories</Typography></a>
                     </Link>
                     <Link href="/contact" >
                         <a onClick={()=>{
