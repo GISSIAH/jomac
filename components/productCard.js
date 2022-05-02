@@ -1,8 +1,12 @@
-import { Card, CardMedia, CardContent, Typography, Chip, Button, Grid } from "@mui/material"
+import { Container, CardMedia,Box, CardContent, Typography, Chip, Button,Grid } from "@mui/material"
 import styles from '../styles/card.module.css'
 import { motion } from "framer-motion"
+import {IoMdAdd} from "react-icons/io"
+
+import { addToCart } from './actions/cartActions.js'
+import Image from "next/image"
 export default function ProductCard(props) {
-    const { name, description, price, images } = props.product
+    const {_id, name, description, price, images } = props.product
     var formatter = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "MWK",
@@ -13,15 +17,16 @@ export default function ProductCard(props) {
                 scale: 1.05,
             }}
         >
-            <Card
-                sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+            <Box
+                sx={{ height:"400px", display: 'flex', flexDirection: 'column', borderRadius:"1px", outline:"1px solid gray" }}
                 {...props}
+                display="flex"
+                flexDirection="column"
+                borderRadius={1}
+                outline="1px solid #DCDCDC"
             >
-                <CardMedia
-                    image={images[0]}
-                    alt={name}
-                    sx={{ width: '100%', height: '15vh' }}
-                />
+                <Image src={images[0]} alt={name} width={300} height={250}/>
+                
                 <CardContent>
                     <Typography variant="h5" >{name}</Typography>
                     <Grid container spacing={6} >
@@ -37,9 +42,9 @@ export default function ProductCard(props) {
                        
                     </Grid>
                     <Chip label="In Stock" variant="outlined" />
-
+                  
                 </CardContent>
-            </Card>
+            </Box>
         </motion.div>
     )
 }

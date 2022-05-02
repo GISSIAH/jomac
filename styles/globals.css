@@ -13,10 +13,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a:hover{
-  background: #3685a7;
-  border-radius: 5px;
-}
+
 
 * {
   box-sizing: border-box;

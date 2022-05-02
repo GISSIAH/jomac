@@ -15,7 +15,8 @@ module.exports = {
   },
   reactStrictMode: true,
   images: {
-    domains: ['www.kindpng.com',"res.cloudinary.com"],
+    domains: ['www.kindpng.com',"res.cloudinary.com","firebasestorage.googleapis.com"],
     formats: ['image/avif', 'image/webp'],
+    
   },
 }

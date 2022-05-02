@@ -32,8 +32,8 @@ export default function Footer() {
               xl={3}
             >
               <Typography variant="h4">Company</Typography>
-              <Link href="/about"><Typography variant="body1">About</Typography></Link>
-              <Link href="/contact"><Typography variant="body1">Contact</Typography></Link>
+              <Link href="/about"><a><Typography variant="body1">About</Typography></a></Link>
+              <Link href="/contact"><a><Typography variant="body1">Contact</Typography></a></Link>
             </Grid>
 
 

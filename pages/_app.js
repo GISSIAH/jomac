@@ -1,6 +1,9 @@
 import Layout from '../components/layout'
 import '../styles/globals.css'
 import { createTheme, ThemeProvider } from '@mui/material'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import cartReducer from '../components/reducers/cartReducer';
 
 
 
@@ -106,9 +109,9 @@ export default function MyApp({ Component, pageProps }) {
       }
     }
   })
-
+  const store = createStore(cartReducer);
   return (
-    <ThemeProvider theme={theme}><Layout><Component {...pageProps} /></Layout></ThemeProvider>
-
+    <Provider store={store}><ThemeProvider theme={theme}><Layout><Component {...pageProps} /></Layout></ThemeProvider>
+    </Provider>
   )
 }
