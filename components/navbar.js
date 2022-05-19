@@ -24,14 +24,14 @@ export default function Navbar() {
     ]
     const router = useRouter()
 
-    const [currentPage,setCurrentPage] = useState(router.pathname)
+    const [currentPage, setCurrentPage] = useState(router.pathname)
     return (
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
                 <div className={styles.leftSide} >
                     <Link href="/">
-                        <a style={{display:'flex'}}><Typography variant="h4" color="primary"> JO</Typography>
-                        <Typography variant="h4" style={{}}> MAC</Typography>
+                        <a style={{ display: 'flex' }}><Typography variant="h4" color="primary"> JO</Typography>
+                            <Typography variant="h4" style={{}}> MAC</Typography>
                         </a>
                     </Link>
                 </div>
@@ -39,20 +39,20 @@ export default function Navbar() {
                     {
                         routes.map(route => {
                             console.log(currentPage);
-                            if(currentPage === route.url){
+                            if (currentPage === route.url) {
                                 return (
                                     <Link href={route.url}>
                                         <a><Typography variant="body1" color='primary'>{route.name}</Typography></a>
                                     </Link>
                                 )
-                            }else{
+                            } else {
                                 return (
                                     <Link href={route.url}>
                                         <a><Typography variant="body1" >{route.name}</Typography></a>
                                     </Link>
                                 )
                             }
-                            
+
                         })
                     }
                 </div>
@@ -64,16 +64,16 @@ export default function Navbar() {
             </div>
             <div className={styles.mobileMenu}>
                 <div className={styles.logo}>
-                    <Typography variant='h2' style={{ fontWeight: '700' }}>
-                        JOMAC
-                    </Typography>
+                    <a style={{ display: 'flex' }}><Typography variant="h2" color="primary"> JO</Typography>
+                        <Typography variant="h2" style={{}}> MAC</Typography>
+                    </a>
                     <div
                         className={styles.menuIcon}
                         onClick={() => {
                             setClicked(!clicked);
                         }}
                     >
-                        {clicked ? <FaTimes size={20} /> : <FaBars size={25} color="white" />}
+                        {clicked ? <FaTimes size={20}  color="#c73e3e" /> : <FaBars size={25} color="#c73e3e" />}
                     </div>
                 </div>
                 <ul className={clicked ? styles.active : styles.normal}>

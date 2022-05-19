@@ -28,9 +28,8 @@
   .mobileMenu {
     display: block;
     position: sticky; 
+    margin-top: 2vh;
     top: 0;
-    background: #c73e3e;
-    color: white;
     height: 5vh;
   }
   .logo {
