@@ -177,6 +177,8 @@
     width: 95vw;
     height: 80vh;
     margin-bottom: 20vh;
+    padding-right: 75px;
+    padding-left: 75px;
   }
   .dealsSection{
     padding-left: 10px;
@@ -211,8 +213,8 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 35px;
+    padding-left: 35px;
     padding-top: 50px;
     width: 95vw;
     height: 80vh;
