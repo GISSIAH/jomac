@@ -8,6 +8,10 @@
   height: 6vh;
   
 }
+.leftSide h4{
+  font-weight: 800;
+  letter-spacing: 2pt;
+}
 
 .rightSide {
   display: flex;
@@ -19,6 +23,11 @@
 }
 .mobileMenu {
   display: none;
+}
+.divider{
+  margin-top: 1vh;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 @media (max-width: 768px) {

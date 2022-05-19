@@ -61,17 +61,20 @@
 .ovalImageBig{
   width: 60%;
   height: 100%;
+  border-radius: 10px;
 }
 
 .ovalImageSmall{
   margin-left: 25px;
   width: 40%;
   height: 100%;
+  border-radius: 10px;
 }
 
 .buttonContainer{
   margin-top: 5vh;
   display: flex;
+  
 }
 
 .dealsSection{

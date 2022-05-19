@@ -1,4 +1,4 @@
-import { Container, CardMedia,Box, CardContent, Typography, Chip, Button,Grid } from "@mui/material"
+import { Card ,Box, CardContent, Typography, Chip, Button,Grid } from "@mui/material"
 import styles from '../styles/card.module.css'
 import { motion } from "framer-motion"
 import {IoMdAdd} from "react-icons/io"
@@ -17,8 +17,8 @@ export default function ProductCard(props) {
                 scale: 1.05,
             }}
         >
-            <Box
-                sx={{ height:"400px", display: 'flex', flexDirection: 'column', borderRadius:"1px", outline:"1px solid gray" }}
+            <Card
+                sx={{ height:"400px", display: 'flex', flexDirection: 'column', }}
                 {...props}
                 display="flex"
                 flexDirection="column"
@@ -41,10 +41,10 @@ export default function ProductCard(props) {
                         
                        
                     </Grid>
-                    <Chip label="In Stock" variant="outlined" />
+                    <Chip label="In Stock" variant="outlined" color="primary" />
                   
                 </CardContent>
-            </Box>
+            </Card>
         </motion.div>
     )
 }

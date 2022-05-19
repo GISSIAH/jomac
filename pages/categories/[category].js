@@ -43,7 +43,7 @@ export default function Category() {
 
             >
                 <div className={styles.heading}>
-                    <Typography variant="h1" color="white">{title}</Typography>
+                    <Typography variant="h1" >{title}</Typography>
                 </div>
                 <Container maxWidth={false} className={styles.mainBox}>
                     <Grid

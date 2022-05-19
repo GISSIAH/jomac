@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }) {
   const theme = createTheme({
 
     shape: {
-      borderRadius: 10
+      borderRadius: 8
     },
     palette: {
       primary: {

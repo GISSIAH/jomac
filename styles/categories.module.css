@@ -10,13 +10,11 @@
   margin-top: 0vh;
   height: 20vh;
   width: 100%;
-  background: #c73e3e;
 }
 .heroText{
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
   margin-top: 30px;
 }
 .hero{

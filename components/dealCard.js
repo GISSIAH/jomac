@@ -10,7 +10,7 @@ export default function DealCard(props) {
     });
     return (
         <Card
-            sx={{ height: "380px", display: 'flex', flexDirection: 'column' }}
+            sx={{ height: "380px", display: 'flex', flexDirection: 'column',background:'#f5f5f5' }}
             {...props}
             display="flex"
             flexDirection="column"

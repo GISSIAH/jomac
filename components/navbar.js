@@ -2,8 +2,8 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import styles from "../styles/navbar.module.css"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { Button, Typography } from '@mui/material'
-import { useRouter } from 'next/router'
+import { Button, Divider, Typography } from '@mui/material'
+
 
 export default function Navbar() {
     const [clicked, setClicked] = useState(false)
@@ -22,9 +22,9 @@ export default function Navbar() {
         }
 
     ]
-    const router = useRouter()
 
-    const [currentPage, setCurrentPage] = useState(router.pathname)
+
+    
     return (
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
@@ -38,26 +38,16 @@ export default function Navbar() {
                 <div className={styles.rightSide}>
                     {
                         routes.map(route => {
-                            console.log(currentPage);
-                            if (currentPage === route.url) {
                                 return (
                                     <Link href={route.url}>
-                                        <a><Typography variant="body1" color='primary'>{route.name}</Typography></a>
+                                        <a><Typography variant="body1">{route.name}</Typography></a>
                                     </Link>
                                 )
-                            } else {
-                                return (
-                                    <Link href={route.url}>
-                                        <a><Typography variant="body1" >{route.name}</Typography></a>
-                                    </Link>
-                                )
-                            }
-
                         })
                     }
                 </div>
                 <div className={styles.cornerSide}>
-                    <Button variant='outlined' color='primary'>
+                    <Button variant='outlined' color='primary' sx={{borderRadius:0 }}>
                         Contact us
                     </Button>
                 </div>
@@ -73,7 +63,7 @@ export default function Navbar() {
                             setClicked(!clicked);
                         }}
                     >
-                        {clicked ? <FaTimes size={20}  color="#c73e3e" /> : <FaBars size={25} color="#c73e3e" />}
+                        {clicked ? <FaTimes size={20} color="#c73e3e" /> : <FaBars size={25} color="#c73e3e" />}
                     </div>
                 </div>
                 <ul className={clicked ? styles.active : styles.normal}>
@@ -94,6 +84,9 @@ export default function Navbar() {
                     </Link>
                 </ul>
 
+            </div>
+            <div className={styles.divider}>
+                <Divider orientation='horizontal' />
             </div>
 
         </nav>

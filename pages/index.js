@@ -41,12 +41,15 @@ export default function Home() {
             <Typography variant="h1">
               Suppliers of Hardware, Electrical & Plumbing Materials.
             </Typography>
-            <Typography variant="h5" sx={{ marginTop: 5 }}>
+            <Typography variant="h5" color="slategray" sx={{ marginTop: 5 }}>
               Browse our stocks and find original high quality materials.
             </Typography>
             <div className={styles.buttonContainer}>
-              <Button variant='contained' color='primary' sx={{ width: 180, }}>
+              <Button variant='contained' color='primary' sx={{ width: 180,borderRadius:0 }}>
                 Browse Categories
+              </Button>
+              <Button variant='outlined' color='primary' sx={{ width: 180,marginLeft:5,borderRadius:0 }}>
+                All Products
               </Button>
             </div>
 
