@@ -27,10 +27,12 @@ export default function MyApp({ Component, pageProps }) {
       fontFamily: "Open Sans, sans serif",
       h1: {
         fontFamily: "Open Sans",
-        fontSize: '3.0rem', [`@media screen and (max-width: 1280px)`]: {
-          fontSize: "2.7rem"
-        }, [`@media screen and (max-width: 992px)`]: {
+        fontSize: '3.0rem', [`@media screen and (max-width: 1440px)`]: {
           fontSize: "2.4rem"
+        }, [`@media screen and (max-width: 1280px)`]: {
+          fontSize: "2.2rem"
+        }, [`@media screen and (max-width: 1024px)`]: {
+          fontSize: "2.0rem"
         }, [`@media screen and (max-width: 768px)`]: {
           fontSize: "2.25rem"
         }, [`@media screen and (max-width: 600px)`]: {
@@ -53,14 +55,16 @@ export default function MyApp({ Component, pageProps }) {
         },[`@media screen and (max-width: 375px)`]: {
           fontSize: "1.25rem"
         },
-        fontWeight: 500
+        fontWeight: 600
       },
       h3: {
         fontFamily: "Open Sans",
-        fontSize:'2.0rem',[`@media screen and (max-width: 1200px)`]: {
-          fontSize: "2.5rem"
-        },[`@media screen and (max-width: 992px)`]: {
-          fontSize: "2rem"
+        fontSize:'2.4rem',[`@media screen and (max-width: 1440px)`]: {
+          fontSize: "2.2rem"
+        },[`@media screen and (max-width: 1280px)`]: {
+          fontSize: "1.9rem"
+        },[`@media screen and (max-width: 1024px)`]: {
+          fontSize: "1.8rem"
         },[`@media screen and (max-width: 768px)`]: {
           fontSize: "1.5rem"
         },[`@media screen and (max-width: 600px)`]: {
@@ -111,7 +115,7 @@ export default function MyApp({ Component, pageProps }) {
   })
   const store = createStore(cartReducer);
   return (
-    <Provider store={store}><ThemeProvider theme={theme}><Layout><Component {...pageProps} /></Layout></ThemeProvider>
-    </Provider>
+  <ThemeProvider theme={theme}><Layout><Component {...pageProps} /></Layout></ThemeProvider>
+
   )
 }

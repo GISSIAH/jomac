@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 20vh;
+  width: 55vw;
 }
 .hero{
   width: 80vw;
@@ -46,15 +47,7 @@
 }
 
 
-.heroText h1{
-    
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-.categoryHeading{
-  margin-top: 1vh;
-  margin-bottom: 2.5vh;
-}
+
 
 
 .ovalParent{
@@ -62,7 +55,7 @@
   flex-direction: row;
   padding-top: 50px;
   width: 65vw;
-  height: 80vh;
+  height: 100%
 }
 
 .ovalImageBig{
@@ -84,6 +77,7 @@
 .dealsSection{
   padding-left: 100px;
   padding-right: 100px;
+  margin-top: 5vh;
 }
 
 .dealsSection h3{
@@ -92,6 +86,19 @@
 .dealsItems{
   margin-top: 3vh;
 }
+
+.categorySection{
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 5vh;
+}
+.categoryItems{
+  margin-top: 3vh;
+}
+.categorySection h3{
+  font-weight: 900;
+}
+
 
 
 @media (max-width: 1366px) {
@@ -119,6 +126,11 @@
     padding-left: 75px;
     padding-right: 75px;
   }
+  .categorySection{
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  
   
 
 }
@@ -136,45 +148,82 @@
   }
 }
 @media (max-width: 768px) {
-  .grid {
-    width: 100%;
+  .heroSection{
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap:5vw;
+    margin-top: 15vh;
+    height: 100vh;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  .categoryHeading{
-    font-size: 20pt;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .heroWord{
-    font-size: 52pt;
-  }
-  .homeGrid{
-    margin-top: 5vh;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-  }
-  .categoryHeading{
-    font-size: 18pt;
-    margin-bottom: 20px;
-  }
-  .hero{
-    width: 85vw;
-    height: 30vh;
-  }
-  .heroText h1{
-    
-    font-size: 18pt;
-    font-weight: 600;
-  }
-  .heroText h6{
-    margin-top: 2vh;
-    font-size: 14pt;
-    font-weight: 500;
-    width: 64vw;
+  .heroText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    width: 100%;
     text-align: center;
   }
+
+  .ovalParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 50px;
+    width: 95vw;
+    height: 80vh;
+    margin-bottom: 20vh;
+  }
+  .dealsSection{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15vh;
+  }
+
+}
+@media (max-width: 480px) {
+  .heroSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:5vw;
+    margin-top: 5vh;
+    height: 100vh;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .heroText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ovalParent{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 50px;
+    width: 95vw;
+    height: 80vh;
+    margin-bottom: 1vh;
+  }
+  .dealsSection{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5vh;
+  }
+
 }
 @media (max-width: 320px) {
 
@@ -182,7 +231,5 @@
     font-size: 14pt;
     margin-bottom: 20px;
   }
-  .heroText h1{
-    font-size: 14pt;
-  }
+
 }
