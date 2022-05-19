@@ -4,20 +4,17 @@
 .heroSection{
   display: flex;
   justify-content: center;
-
   gap:5vw;
-  margin-bottom: 2vh;
   margin-top: 0vh;
-  height: 35vh;
+  height: 80vh;
   width: 100%;
-  background: #c73e3e;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .heroText{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: white;
-  margin-top: 30px;
+  margin-top: 20vh;
 }
 .hero{
   width: 80vw;
@@ -60,15 +57,78 @@
 }
 
 
+.ovalParent{
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  width: 65vw;
+  height: 80vh;
+}
+
+.ovalImageBig{
+  width: 60%;
+  height: 100%;
+}
+
+.ovalImageSmall{
+  margin-left: 25px;
+  width: 40%;
+  height: 100%;
+}
+
+.buttonContainer{
+  margin-top: 5vh;
+  display: flex;
+}
+
+.dealsSection{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.dealsSection h3{
+  font-weight: 900;
+}
+.dealsItems{
+  margin-top: 3vh;
+}
+
+
+@media (max-width: 1366px) {
+
+  .heroSection{
+    display: flex;
+    justify-content: center;
+    gap:5vw;
+    margin-top: 0vh;
+    height: 80vh;
+    width: 100%;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+
+  .ovalParent{
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    width: 70vw;
+    height: 80vh;
+  }
+  .dealsSection{
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  
+
+}
+
+
+
 @media (max-width: 1024px) {
   .grid {
     width: 100%;
     flex-direction: column;
-  }
-  .heroText h1{
-    
-    font-size: 2rem;
-    font-weight: 600;
   }
   .categoryHeading{
     font-size: 20pt;

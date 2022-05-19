@@ -1,16 +1,21 @@
 .navbar {
 }
 .deskMenu {
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 6vh;
-  color: white;
-  background: #c73e3e;
+  
 }
+
 .rightSide {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+}
+.rightSide p{
+  font-weight: 600;
+  font-size: 14pt;
 }
 .mobileMenu {
   display: none;

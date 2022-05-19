@@ -2,27 +2,64 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import styles from "../styles/navbar.module.css"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { Typography } from '@mui/material'
+import { Button, Typography } from '@mui/material'
+import { useRouter } from 'next/router'
+
 export default function Navbar() {
     const [clicked, setClicked] = useState(false)
+    const routes = [
+        {
+            url: "/",
+            name: "Home"
+        },
+        {
+            url: "/category",
+            name: "Categories"
+        },
+        {
+            url: "/contact",
+            name: "Products"
+        }
+
+    ]
+    const router = useRouter()
+
+    const [currentPage,setCurrentPage] = useState(router.pathname)
     return (
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
                 <div className={styles.leftSide} >
                     <Link href="/">
-                        <a><Typography variant="h4" style={{}}> JOMAC</Typography></a>
+                        <a style={{display:'flex'}}><Typography variant="h4" color="primary"> JO</Typography>
+                        <Typography variant="h4" style={{}}> MAC</Typography>
+                        </a>
                     </Link>
                 </div>
                 <div className={styles.rightSide}>
-                    <Link href="/">
-                        <a><Typography variant="body1" style={{}}> Home</Typography></a>
-                    </Link>
-                    <Link href="/category">
-                        <a><Typography variant="body1" style={{}}>Categories</Typography></a>
-                    </Link>
-                    <Link href="/contact">
-                        <a><Typography variant="body1" style={{}}> Contact us</Typography></a>
-                    </Link>
+                    {
+                        routes.map(route => {
+                            console.log(currentPage);
+                            if(currentPage === route.url){
+                                return (
+                                    <Link href={route.url}>
+                                        <a><Typography variant="body1" color='primary'>{route.name}</Typography></a>
+                                    </Link>
+                                )
+                            }else{
+                                return (
+                                    <Link href={route.url}>
+                                        <a><Typography variant="body1" >{route.name}</Typography></a>
+                                    </Link>
+                                )
+                            }
+                            
+                        })
+                    }
+                </div>
+                <div className={styles.cornerSide}>
+                    <Button variant='outlined' color='primary'>
+                        Contact us
+                    </Button>
                 </div>
             </div>
             <div className={styles.mobileMenu}>

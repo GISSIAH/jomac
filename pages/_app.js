@@ -27,10 +27,10 @@ export default function MyApp({ Component, pageProps }) {
       fontFamily: "Open Sans, sans serif",
       h1: {
         fontFamily: "Open Sans",
-        fontSize: '3.5rem', [`@media screen and (max-width: 1200px)`]: {
-          fontSize: "3rem"
+        fontSize: '3.0rem', [`@media screen and (max-width: 1280px)`]: {
+          fontSize: "2.7rem"
         }, [`@media screen and (max-width: 992px)`]: {
-          fontSize: "2rem"
+          fontSize: "2.4rem"
         }, [`@media screen and (max-width: 768px)`]: {
           fontSize: "2.25rem"
         }, [`@media screen and (max-width: 600px)`]: {
@@ -57,7 +57,7 @@ export default function MyApp({ Component, pageProps }) {
       },
       h3: {
         fontFamily: "Open Sans",
-        fontSize:'2.5rem',[`@media screen and (max-width: 1200px)`]: {
+        fontSize:'2.0rem',[`@media screen and (max-width: 1200px)`]: {
           fontSize: "2.5rem"
         },[`@media screen and (max-width: 992px)`]: {
           fontSize: "2rem"
