@@ -1,9 +1,7 @@
 import Layout from '../components/layout'
 import '../styles/globals.css'
 import { createTheme, ThemeProvider } from '@mui/material'
-import { Provider } from 'react-redux';       // Importing Provider
 
-import store from '../redux/store';   
 
 
 export default function MyApp({ Component, pageProps }) {
@@ -125,7 +123,7 @@ export default function MyApp({ Component, pageProps }) {
   })
 
   return (
-  <ThemeProvider theme={theme}><Provider store={store}><Layout><Component {...pageProps} /></Layout></Provider></ThemeProvider>
+  <ThemeProvider theme={theme}><Layout><Component {...pageProps} /></Layout></ThemeProvider>
 
   )
 }

@@ -4,21 +4,31 @@ import { motion } from "framer-motion"
 import { IoMdAdd } from "react-icons/io"
 
 import Image from "next/image"
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/cart.slice';
+import { useEffect } from "react"
+import { addToCart } from "../cart/actions"
+function setItem(name){
+    if (typeof window !== 'undefined') {
+        // Perform localStorage action
+        const item = localStorage.setItem('name',name)
+        //console.log(item);
+      } 
+}
 export default function ProductCard(props) {
     const { _id, name, description, price, images } = props.product
     const pro = {
         id: _id,
         name: name,
         description: description,
-        price: price
+        price: price,
+        quantity:1
     }
-    const dispatch = useDispatch();
     var formatter = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "MWK",
     });
+    useEffect(()=>{
+       
+    },[])
     return (
         <motion.div
             whileHover={{
@@ -53,7 +63,9 @@ export default function ProductCard(props) {
                    
 
                 </CardContent>
-
+                <Button variant="contained" sx={{ width: 100 }} color="primary" onClick={() => {
+                    addToCart(pro)
+                }}>Add to Cart</Button>
             </Card>
         </motion.div>
     )

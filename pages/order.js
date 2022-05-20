@@ -1,30 +1,24 @@
 import React from 'react'
-import { useRouter } from "next/router";
 import { Box, Typography } from '@mui/material';
-import { Container, Grid } from '@mui/material'
+import { Container} from '@mui/material'
 import styles from "../styles/order.module.css"
 import Head from 'next/head';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
+
 import CartItem from '../components/cartItem';
+import { getCart } from '../cart/actions';
 
-export default function Category() {
+export default function Order() {
 
-    const cart = useSelector((state) => state.cart);
-    const dispatch = useDispatch();
-
-    /*
+    const  [ cart,setCart] = useState([])
     useEffect(()=>{
+        let tempCart = getCart()
         
-        axios.get(`https://alpha-jomac.herokuapp.com/product/category/${title}`).then((res)=>{
-            console.log(res.data);
-            setProducts(res.data)
-        }).catch((err)=>{
-            alert("an error occured on our end")
-        })
-    },[title])
- */
+        setCart(tempCart.cartItems)
+        
+    },[])
+ 
     return (
         <div className={styles.container}>
             <Head>

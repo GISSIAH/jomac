@@ -8,15 +8,15 @@ import ProductCard from '../../components/productCard';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
+import { getCart } from '../../cart/actions';
 
 export default function Category() {
     const [products,setProducts] = useState([])
-    const cart = useSelector((state) => state.cart);
-    const dispatch = useDispatch();
     const router = useRouter()
     const title = router.query.category
-    console.log(cart);
+
     useEffect(()=>{
+        console.log(getCart());
         axios.get(`https://alpha-jomac.herokuapp.com/product/category/${title}`).then((res)=>{
             console.log(res.data);
             setProducts(res.data)
