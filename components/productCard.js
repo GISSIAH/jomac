@@ -49,11 +49,8 @@ export default function ProductCard(props) {
 
 
                     </Grid>
-                    <Box sx={{marginTop:2}}>
-                        <Button variant="contained" sx={{ width: 180 }} color="primary" onClick={() => {
-                            dispatch(addToCart(pro))
-                        }}>Add to Cart</Button>
-                    </Box>
+                    
+                   
 
                 </CardContent>
 
@@ -61,3 +58,10 @@ export default function ProductCard(props) {
         </motion.div>
     )
 }
+/*
+<Box sx={{marginTop:2}}>
+<Button variant="contained" sx={{ width: 180 }} color="primary" onClick={() => {
+    dispatch(addToCart(pro))
+}}>Add to Cart</Button>
+</Box>
+*/

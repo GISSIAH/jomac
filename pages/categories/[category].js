@@ -60,7 +60,7 @@ export default function Category() {
                                     md={4}
                                     sm={6}
                                     xl={3}
-                                    xs={12}
+                                    xs={6}
                                 >
                                     <ProductCard
                                         product={product}
