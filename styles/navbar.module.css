@@ -44,6 +44,9 @@
     top: 0;
     height: 5vh;
   }
+  .mobileMenu p{
+    color: whitesmoke;
+  }
   .logo {
     display: flex;
     justify-content: center;

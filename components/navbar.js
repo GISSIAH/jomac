@@ -4,9 +4,10 @@ import styles from "../styles/navbar.module.css"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Button, Divider, Typography } from '@mui/material'
 
-
+import { getCart } from '../cart/actions'
 export default function Navbar() {
     const [clicked, setClicked] = useState(false)
+    const cart = getCart()
     const routes = [
         {
             url: "/",
@@ -79,6 +80,11 @@ export default function Navbar() {
                         <a onClick={() => {
                             setClicked(false)
                         }}><Typography variant="body1" style={{ marginTop: '5px' }}>Categories</Typography></a>
+                    </Link>
+                    <Link href="/order" >
+                        <a onClick={() => {
+                            setClicked(false)
+                        }}><Typography variant="body1" style={{ marginTop: '5px' }}>Your Order</Typography></a>
                     </Link>
                     <Link href="/contact" >
                         <a onClick={() => {
