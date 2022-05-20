@@ -45,10 +45,10 @@ export default function Home() {
               Browse our stocks and find original high quality materials.
             </Typography>
             <div className={styles.buttonContainer}>
-              <Button variant='contained' color='primary' sx={{ width: 180,borderRadius:0 }}>
+              <Button variant='contained' color='primary' sx={{ width: 180, borderRadius:0 }}>
                 Browse Categories
               </Button>
-              <Button variant='outlined' color='primary' sx={{ width: 180,marginLeft:5,borderRadius:0 }}>
+              <Button variant='outlined' color='primary' sx={{ width: 180,borderRadius:0 }}>
                 All Products
               </Button>
             </div>
@@ -74,7 +74,7 @@ export default function Home() {
                     md={4}
                     sm={6}
                     xl={3}
-                    xs={12}
+                    xs={6}
                   >
                     <DealCard
                       product={product}

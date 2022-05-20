@@ -2,21 +2,21 @@ import React from 'react'
 import { useRouter } from "next/router";
 import { Box, Typography } from '@mui/material';
 import { Container, Grid } from '@mui/material'
-import styles from "../../styles/category.module.css"
+import styles from "../styles/order.module.css"
 import Head from 'next/head';
-import ProductCard from '../../components/productCard';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
+import CartItem from '../components/cartItem';
 
 export default function Category() {
-    const [products,setProducts] = useState([])
+
     const cart = useSelector((state) => state.cart);
     const dispatch = useDispatch();
-    const router = useRouter()
-    const title = router.query.category
-    console.log(cart);
+
+    /*
     useEffect(()=>{
+        
         axios.get(`https://alpha-jomac.herokuapp.com/product/category/${title}`).then((res)=>{
             console.log(res.data);
             setProducts(res.data)
@@ -24,7 +24,7 @@ export default function Category() {
             alert("an error occured on our end")
         })
     },[title])
-
+ */
     return (
         <div className={styles.container}>
             <Head>
@@ -45,32 +45,16 @@ export default function Category() {
 
             >
                 <div className={styles.heading}>
-                    <Typography variant="h1" >{title}</Typography>
+                    <Typography variant="h1" >Your Order</Typography>
                 </div>
-                <Container maxWidth={false} className={styles.mainBox}>
-                    <Grid
-                        container
-                        spacing={6}
-                    >
-                        {products.map((product) => {
-                            return (
-                                <Grid
-                                    item
-                                    lg={3}
-                                    md={4}
-                                    sm={6}
-                                    xl={3}
-                                    xs={12}
-                                >
-                                    <ProductCard
-                                        product={product}
-                                    />
-
-                                </Grid>
-
-                            )
-                        })}
-                    </Grid>
+                <Container maxWidth={false} className={styles.mainBox} sx={{marginTop:2}}>
+                   {
+                       cart.map(item=>{
+                           return(
+                               <CartItem name={item.name}/>
+                           )
+                       })
+                   }
                 </Container>
 
             </Box>

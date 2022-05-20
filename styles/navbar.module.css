@@ -24,6 +24,9 @@
 .mobileMenu {
   display: none;
 }
+.cornerSide{
+  display: flex;
+}
 .divider{
   margin-top: 1vh;
   padding-left: 100px;

@@ -24,7 +24,7 @@ export default function Navbar() {
     ]
 
 
-    
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
@@ -38,16 +38,19 @@ export default function Navbar() {
                 <div className={styles.rightSide}>
                     {
                         routes.map(route => {
-                                return (
-                                    <Link href={route.url}>
-                                        <a><Typography variant="body1">{route.name}</Typography></a>
-                                    </Link>
-                                )
+                            return (
+                                <Link href={route.url}>
+                                    <a><Typography variant="body1">{route.name}</Typography></a>
+                                </Link>
+                            )
                         })
                     }
                 </div>
                 <div className={styles.cornerSide}>
-                    <Button variant='outlined' color='primary' sx={{borderRadius:0 }}>
+                    <Link href="/order">
+                        <a><Typography variant="h6" color="primary">Your Order</Typography></a>
+                    </Link>
+                    <Button variant='outlined' color='primary' sx={{ borderRadius: 0 ,marginLeft:1}}>
                         Contact us
                     </Button>
                 </div>
