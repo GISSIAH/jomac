@@ -26,17 +26,17 @@ export default function ProductCard(props) {
             }}
         >
             <Card
-                sx={{ height: "400px", display: 'flex', flexDirection: 'column', }}
+                sx={{ display: 'flex', flexDirection: 'column', }}
                 {...props}
                 display="flex"
                 flexDirection="column"
                 borderRadius={1}
                 outline="1px solid #DCDCDC"
             >
-                <Image src={images[0]} alt={name} width={300} height={250} />
+                <Image src={images[0]} alt={name} width={280} height={250} />
 
                 <CardContent>
-                    <Typography variant="h5" >{name}</Typography>
+                    <Typography variant="h6" >{name}</Typography>
                     <Grid container spacing={6} >
                         <Grid item
                             lg={6}
@@ -44,12 +44,11 @@ export default function ProductCard(props) {
                             sm={6}
                             xl={6}
                             xs={6}>
-                            <Typography variant="h5" >{formatter.format(price)}</Typography>
+                            <Typography variant="h6" >{formatter.format(price)}</Typography>
                         </Grid>
 
 
                     </Grid>
-                    <Chip label="In Stock" variant="outlined" color="primary" />
                     <Box sx={{marginTop:2}}>
                         <Button variant="contained" sx={{ width: 180 }} color="primary" onClick={() => {
                             dispatch(addToCart(pro))

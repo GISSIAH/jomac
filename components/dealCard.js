@@ -10,7 +10,7 @@ export default function DealCard(props) {
     });
     return (
         <Card
-            sx={{ height: "320px", display: 'flex', flexDirection: 'column',background:'#f5f5f5' }}
+            sx={{  gap:'2%', display: 'flex', flexDirection: 'column',background:'#f5f5f5' }}
             {...props}
             display="flex"
             flexDirection="column"
@@ -19,7 +19,7 @@ export default function DealCard(props) {
             <Image src={images[0]} alt={name} width={280} height={250} />
 
             <CardContent>
-                <Typography variant="h5" >{name}</Typography>
+                <Typography variant="h6" >{name}</Typography>
                 <Grid container spacing={6} >
                     <Grid item
                         lg={6}
@@ -27,13 +27,11 @@ export default function DealCard(props) {
                         sm={6}
                         xl={6}
                         xs={6}>
-                        <Typography variant="h5" >{formatter.format(price)}</Typography>
+                        <Typography variant="h6" >{formatter.format(price)}</Typography>
                     </Grid>
 
 
                 </Grid>
-                <Chip label="In Stock" variant="outlined" />
-
             </CardContent>
         </Card>
     )

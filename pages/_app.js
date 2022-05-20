@@ -106,6 +106,17 @@ export default function MyApp({ Component, pageProps }) {
       h6: {
         fontFamily: "Open Sans",
         fontWeight: 400
+        ,fontSize:'1.30rem',[`@media screen and (max-width: 1200px)`]: {
+          fontSize: "1.0rem"
+        },[`@media screen and (max-width: 992px)`]: {
+          fontSize: "1.0rem"
+        },[`@media screen and (max-width: 768px)`]: {
+          fontSize: "1.0rem"
+        },[`@media screen and (max-width: 600px)`]: {
+          fontSize: "1rem"
+        },[`@media screen and (max-width: 375px)`]: {
+          fontSize: "0.8rem"
+        },
       },
       button: {
         fontFamily: "Open Sans",

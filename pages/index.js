@@ -71,7 +71,7 @@ export default function Home() {
                   <Grid
                     item
                     lg={3}
-                    md={4}
+                    md={3}
                     sm={6}
                     xl={3}
                     xs={6}
