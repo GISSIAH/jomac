@@ -13,9 +13,11 @@
 .propertyTitle{
     font-size: 14pt;
 }
-.propertyPrice{
-    font-size: 14pt;
+
+.buttonContainer{
+    width: 10vw;
 }
+
 @media (max-width: 1024px) {
 
     .propertyTitle{

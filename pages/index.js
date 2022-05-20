@@ -45,7 +45,7 @@ export default function Home() {
               Browse our stocks and find original high quality materials.
             </Typography>
             <div className={styles.buttonContainer}>
-              <Button variant='contained' color='primary' sx={{ width: 180, borderRadius:0 }}>
+              <Button variant='contained' color='primary' sx={{ width: 180, borderRadius:0 }} href="/category">
                 Browse Categories
               </Button>
               <Button variant='outlined' color='primary' sx={{ width: 180,borderRadius:0 }}>

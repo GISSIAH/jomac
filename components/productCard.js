@@ -6,12 +6,12 @@ import { IoMdAdd } from "react-icons/io"
 import Image from "next/image"
 import { useEffect } from "react"
 import { addToCart } from "../cart/actions"
-function setItem(name){
+function setItem(name) {
     if (typeof window !== 'undefined') {
         // Perform localStorage action
-        const item = localStorage.setItem('name',name)
+        const item = localStorage.setItem('name', name)
         //console.log(item);
-      } 
+    }
 }
 export default function ProductCard(props) {
     const { _id, name, description, price, images } = props.product
@@ -20,15 +20,15 @@ export default function ProductCard(props) {
         name: name,
         description: description,
         price: price,
-        quantity:1
+        quantity: 1
     }
     var formatter = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "MWK",
     });
-    useEffect(()=>{
-       
-    },[])
+    useEffect(() => {
+
+    }, [])
     return (
         <motion.div
             whileHover={{
@@ -59,21 +59,17 @@ export default function ProductCard(props) {
 
 
                     </Grid>
-                    
-                   
+
+
 
                 </CardContent>
-                <Button variant="contained" sx={{ width: 100 }} color="primary" onClick={() => {
-                    addToCart(pro)
-                }}>Add to Cart</Button>
+                <Box sx={{px:1,py:1}}>
+                    <Button variant="contained" color="primary" onClick={() => {
+                        addToCart(pro)
+                    }}>Add to Cart</Button>
+                </Box>
+
             </Card>
         </motion.div>
     )
 }
-/*
-<Box sx={{marginTop:2}}>
-<Button variant="contained" sx={{ width: 180 }} color="primary" onClick={() => {
-    dispatch(addToCart(pro))
-}}>Add to Cart</Button>
-</Box>
-*/

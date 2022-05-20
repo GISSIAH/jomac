@@ -1,9 +1,15 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material';
-import { Container} from '@mui/material'
+import { Box, Paper, Typography } from '@mui/material';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import { Container } from '@mui/material'
 import styles from "../styles/order.module.css"
 import Head from 'next/head';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import CartItem from '../components/cartItem';
@@ -11,14 +17,14 @@ import { getCart } from '../cart/actions';
 
 export default function Order() {
 
-    const  [ cart,setCart] = useState([])
-    useEffect(()=>{
+    const [cart, setCart] = useState([])
+    useEffect(() => {
         let tempCart = getCart()
-        
+
         setCart(tempCart.cartItems)
-        
-    },[])
- 
+
+    }, [])
+
     return (
         <div className={styles.container}>
             <Head>
@@ -41,15 +47,33 @@ export default function Order() {
                 <div className={styles.heading}>
                     <Typography variant="h1" >Your Order</Typography>
                 </div>
-                <Container maxWidth={false} className={styles.mainBox} sx={{marginTop:2}}>
-                   {
-                       cart.map(item=>{
-                           return(
-                               <CartItem name={item.name}/>
-                           )
-                       })
-                   }
-                </Container>
+                <div className={styles.tableContainer}>
+                    <TableContainer component={Paper}>
+                        <Table aria-label="simple table">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>Name</TableCell>
+                                    <TableCell align="right">Quantity</TableCell>
+                                    <TableCell align="right">Remove</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {
+                                    cart.map(item => {
+                                        return (
+                                            <TableRow>
+                                                <CartItem name={item.name} quantity={item.quantity} />
+                                            </TableRow>
+
+                                        )
+                                    })
+                                }
+                            </TableBody>
+                        </Table>
+
+                    </TableContainer>
+                </div>
+
 
             </Box>
         </div>
