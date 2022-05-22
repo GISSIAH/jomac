@@ -11,8 +11,7 @@ export default function OrderList() {
     useEffect(() => {
         let tempCart = getCart()
         console.log(tempCart);
-        console.log(tempCart);
-        setCart(tempCart)
+        setCart(tempCart.cartItems)
 
     }, [])
 
