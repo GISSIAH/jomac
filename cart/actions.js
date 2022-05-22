@@ -5,11 +5,11 @@ export function addToCart(product){
         console.log(cart);
         if(cart != null  ){
             const cartObj = JSON.parse(cart)
-            const productExists = cartObj.find((item) => item.id === product.id);
+            const productExists = cartObj.cartItems.find((item) => item.id === product.id);
             if(productExists){
                 productExists.quantity ++
             }else{
-                cartObj.push(product)
+                cartObj.cartItems.push(product)
             }
             localStorage.setItem('cart',JSON.stringify(cartObj))
         }else{
