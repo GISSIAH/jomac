@@ -38,9 +38,9 @@ export default function Navbar() {
                 </div>
                 <div className={styles.rightSide}>
                     {
-                        routes.map(route => {
+                        routes.map((route,index) => {
                             return (
-                                <Link href={route.url}>
+                                <Link href={route.url} key={index}>
                                     <a><Typography variant="body1">{route.name}</Typography></a>
                                 </Link>
                             )

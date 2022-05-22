@@ -14,16 +14,11 @@ import axios from 'axios';
 
 import CartItem from '../components/cartItem';
 import { getCart } from '../cart/actions';
+import OrderList from '../components/orderList';
 
 export default function Order() {
 
-    const [cart, setCart] = useState([])
-    useEffect(() => {
-        let tempCart = getCart()
-
-        setCart(tempCart.cartItems)
-
-    }, [])
+    
 
     return (
         <div className={styles.container}>
@@ -58,16 +53,7 @@ export default function Order() {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {
-                                    cart.map(item => {
-                                        return (
-                                            <TableRow>
-                                                <CartItem name={item.name} quantity={item.quantity} />
-                                            </TableRow>
-
-                                        )
-                                    })
-                                }
+                                <OrderList/>
                             </TableBody>
                         </Table>
 
