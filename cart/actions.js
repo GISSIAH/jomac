@@ -29,9 +29,9 @@ export function removeFromCart(product){
         //check if cart exists
         const cart = localStorage.getItem("cart")
         const jsonCart = JSON.parse(cart)
-        for (var i = 0; i < jsonCart.length; i++) {
+        for (var i = 0; i < jsonCart.cartItems.length; i++) {
             if (jsonCart[i].name === product.name) {
-                var spliced = jsonCart.splice(i, 1);
+                var spliced = jsonCart.cartItems.splice(i, 1);
                 console.log(spliced);
             }
         }
