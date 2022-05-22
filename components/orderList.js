@@ -34,7 +34,7 @@ export default function OrderList() {
                         <CartItem name={item.name} quantity={item.quantity} removeItem={() => {
                             removeFromCart({ name: item.name })
                             let tempCart = getCart()
-                            setCart(tempCart)
+                            setCart(tempCart.cartItems)
                         }} />
 
                     </Fragment>
