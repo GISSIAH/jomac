@@ -30,7 +30,7 @@ export function removeFromCart(product){
         const cart = localStorage.getItem("cart")
         const jsonCart = JSON.parse(cart)
         for (var i = 0; i < jsonCart.cartItems.length; i++) {
-            if (jsonCart[i].name === product.name) {
+            if (jsonCart.cartItems[i].name === product.name) {
                 var spliced = jsonCart.cartItems.splice(i, 1);
                 console.log(spliced);
             }
