@@ -19,13 +19,9 @@ export default function Navbar() {
         },
         {
             url: "/contact",
-            name: "Products"
+            name: "Contact"
         }
-
     ]
-
-
-
     return (
         <nav className={styles.navbar}>
             <div className={styles.deskMenu}>
